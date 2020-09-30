@@ -1,6 +1,8 @@
 const url = `https://jsonplaceholder.typicode.com/posts`
-const posts = document.getElementsByClassName('posts')
-const postsWithBlog = document.getElementById('postsWithBlog')
+const posts = document.getElementById("main-btn")
+//const postsWithBlog = document.getElementById('postsWithBlog')
+posts.addEventListener("click", getPost)
+
 function getPost() {
     fetch(url)
         .then(res => res.json())

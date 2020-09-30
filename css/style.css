@@ -2,3 +2,24 @@ body
 {
     background-color:whitesmoke;
 }
+#main-btn {
+background: none;
+color: yellowgreen;
+border: 1px solid #3498db;
+padding: 10px 20px;
+font-size: 20px;
+font-family: "montserrat";
+cursor: pointer;
+margin: 10px;
+transition: all 1s;
+
+
+}
+#main-btn:hover{
+color: blue;
+font-size: 30px;
+}
+.posts{
+
+    background-color: burlywood;
+}

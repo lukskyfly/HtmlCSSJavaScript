@@ -1,5 +1,5 @@
-//const url = "Ala ma kota.'a kot ma Ale'"
-//console.log(url)
+const url = "Ala ma kota.'a kot ma Ale'"
+console.log(url)
 //let tablica = ["Jan", "Karol","Iwona",  "Wojtek", "Michal"]
 //tablica.push("Halina")
 //pop usuwa ostatni element w tablicy
