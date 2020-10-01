@@ -2,7 +2,8 @@ body
 {
     background-color:whitesmoke;
 }
-#main-btn {
+#main-btn
+{
 background: none;
 color: yellowgreen;
 border: 1px solid #3498db;
@@ -12,14 +13,159 @@ font-family: "montserrat";
 cursor: pointer;
 margin: 10px;
 transition: all 1s;
-
-
 }
-#main-btn:hover{
+#main-btn:hover
+{
 color: blue;
 font-size: 30px;
 }
 .posts{
 
-    background-color: burlywood;
+    background-color:wheat;
+}
+h1
+{
+    color: brown;
+    font-family: sans-serif;
+}
+a
+{
+    color: blueviolet;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+a:visited
+{
+color: gray;
+}
+a:hover
+{
+    text-decoration: underline;
+    color: deepskyblue;
+}
+table
+{
+    border: 1px solid blak;
+    width: 100%;
+}
+td
+{
+  border: 1px solid black;  
+}
+#navbar
+{
+    font-size: 150%;
+    text-align: center;
+    padding: 15px;
+    background-color: aliceblue;
+    border-top: 2px dashed grey;
+    border-bottom: 2px dashed grey;
+}
+#navbar a {
+    margin: 2px  20px;
+   
+}
+#main
+{
+    background-color: floralwhite;
+    font-size: 0;
+
+}
+#content
+{
+    display: inline-block;
+    width: 1000px;
+    height: auto;
+    text-align: justify;
+    background-color: bisque;
+    font-size: 15px;
+        
+}
+#akapit1,#akapit2
+{
+    box-sizing: border-box;
+    width: 50%;
+    line-height: 200%;
+    padding: 50px;
+   
+}
+#akapit1
+{
+    float: left;
+}
+#akapit2 
+{
+    float: right;
+}
+#sidemenu
+{
+    line-height: 200%;
+    display: inline-block;
+    width: 150px;
+    float: right;
+    width: 200px;
+    font-size: 15px;
+    }
+#footer
+{
+    border-top: 1px solid gray;
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: gray;
+    font-style: italic;
+    background-color:aliceblue;
+}
+#conteiner{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid gray;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header{
+    text-align: center;
+    font-size: 250%;
+    color: brown;
+    background-color: antiquewhite;
+    height: 120px;
+    position: relative;
+}
+#header>span{
+    padding: 25px;
+    display: block;
+}
+/* lekcja 6 */
+
+#title
+{
+ transition: all 1s ease-out ;
+  
+
+}
+#title:hover{
+color: blue;
+font-size: 130%;
+cursor: pointer;
+transform: translate(100px) rotate(5deg)skewX(-20deg);
+
+
+}
+#title::after
+{
+content: '';
+display: block;
+height: 5px;
+width: 0px;
+background-color: blue;
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+transition: all 1s ease-out;
+}
+#title:hover::after
+{
+width: 580px;
 }
