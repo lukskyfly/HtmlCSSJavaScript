@@ -1,0 +1,45 @@
+*
+{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 40px;
+}
+.square
+{
+height: auto;
+min-height: 300px;
+max-height: 700px;
+width: 30%;
+background-color: bisque;
+margin: 30px;
+display: inline-block;
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+transition: all 0.2s ease-out;
+
+}
+.square:hover
+{
+    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.75);
+    opacity: 80%;
+    
+}
+#first
+{
+position: absolute;
+top: 0;
+left: 0;
+z-index: 10;
+}
+#middle
+{
+    overflow: hidden;
+    background-image: radial-gradient(#ff7788, #9988ff,#99ff99);
+}
+#last
+{
+z-index: 9;
+position: absolute;
+top: 100px;
+left: 100px;
+background-color: aquamarine;
+}

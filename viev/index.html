@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kurs Html,Css i Java Script</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="../images/favicon.ico"/>
+    <link rel="icon" href="../images/favicon.ico" />
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <header id="header"><span id="title">Kurs Html,Css i Java Script</span> </header>
 
         <nav id="navbar">
-            <a href="#">Link</a>
+            <a href="test.html">Link</a>
             <a href="#">Link</a>
             <a href="#">Link</a>
             <a href="#">Link</a>
@@ -52,23 +52,54 @@
                         laoreet,
                         nisl lectus auctor eros, at posuere orci ligula vel enim. Pellentesque et posuere erat.</p>
                 </section>
-                </article>
-    
-    <aside id="sidemenu">
-        <ul>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-        </ul>
-    </aside>
+            </article>
+
+            <aside id="sidemenu">
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </aside>
         </main>
-    <footer id="footer">
-        <span>Wszelkie prawa zastrzeżone!</span><br><br>
-        <span>Kontakt:</span>
-        <form action="" method="GET">
-            <p>Text: <input type="text"name="nazwa" size="20"maximus="10"></p>
-        </form>
-    </footer>
-</div>
-</body></html>
+        <footer id="footer">
+            <span>Wszelkie prawa zastrzeżone!</span><br><br>
+            <span>Kontakt:</span>
+            <form action="" method="GET">
+                <p>Text: <input type="text" name="nazwa" value="Jan Kowalski" size="20" maxlength="10"></p>
+                <p>Email: <input type="email" name="nazwa" required></p>
+                <p>Password: <input type="password" name="nazwa" placeholder="Podaj hasło"></p>
+                <p>Number: <input type="number" name="nazwa"></p>
+                <p>Data: <input type="date" name="name"></p>
+
+                <p>Płeć</p>
+                <P><label><input type="radio" name="plec" value="kobieta" checked="checked">Kobieta</label></P>
+                <P><label><input type="radio" name="plec" value="meżczyzna" checked="checked">Mężczyzna</label></P>
+
+                <p><input type="checkbox" name="jezyki" value="C">C</p>
+                <p><input type="checkbox" name="jezyki" value="Java">Java</p>
+                <p><input type="checkbox" name="jezyki" value="Python">Python</p>
+
+                <p>
+                    <select name="nazwa" size="4" multiple="multiple">
+                        <optgroup label="Sekcja 1">
+                            <option selected="selected">1 opcja</option>
+                            <option value="">2 opcja</option>
+                        </optgroup>
+                        <optgroup label="Sekcja 2">
+                            <option value="">3 opcja</option>
+                            <option value="">4 opcja</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <textarea name="nazwa" cols="40" rows="10" placeholder="Wpisz jakiś tekst">Jakiś tekst</textarea>
+                <p><input type="reset" value="Wyślij"><input type="submit" value="Wyczyść pola"></p>
+                
+            </form>
+        </footer>
+    </div>
+</body>
+
+</html>
