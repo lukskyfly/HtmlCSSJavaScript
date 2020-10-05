@@ -7,6 +7,7 @@
     <title>Kurs Html,Css i Java Script</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/favicon.ico" />
+    <script src="../js/getPosts.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
         <main id="main">
             <article id="content">
                 <section>
-                    <p id="akapit1"><q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac nulla
+                                       <p id="akapit1"><q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac nulla
                             consectetur, sodales mauris eu, varius lorem. Morbi gravida enim ac leo bibendum hendrerit.
                             Integer ligula eros, sodales vitae semper sed, rutrum ut velit. Maecenas tempor placerat
                             magna
@@ -56,10 +57,10 @@
 
             <aside id="sidemenu">
                 <ul>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+                    <li><a href="https://mvnrepository.com/tags/hibernate"target="blank">MVN repository</a></li>
+                    <li><a href="https://kantordlafirm.pl/"target="blank">Kursy walut</a></li>
+                    <li><a blank href="https://www.hattrick.org/"target="blank">Hattrick</a></li>
+                    <li><a href="https://www.youtube.com" target="blank">Youtube</a></li>
                 </ul>
             </aside>
         </main>
@@ -96,10 +97,20 @@
 
                 <textarea name="nazwa" cols="40" rows="10" placeholder="Wpisz jakiś tekst">Jakiś tekst</textarea>
                 <p><input type="reset" value="Wyślij"><input type="submit" value="Wyczyść pola"></p>
-                
+
             </form>
         </footer>
     </div>
-</body>
-
-</html>
+    <button id="main-btn">Pobierz posty</button>
+   <script src="../js/main.js"></script>
+     <script src="../js/getPosts.js"></script>
+    <script src="../js/main.js"></script>
+    <select name="" id="tabela">
+        <option value="A">TABELA A</option>
+        <option value="B">TABELA B</option>
+        <option value="C">TABELA C</option>
+    </select>
+    <button onclick="pobierz()">Pobierz</button>
+    <div id="kursy">
+    </div>
+</body></html>

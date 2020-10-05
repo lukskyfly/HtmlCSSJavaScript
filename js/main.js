@@ -1,69 +1,33 @@
-const url = "Ala ma kota.'a kot ma Ale'"
-console.log(url)
-//let tablica = ["Jan", "Karol","Iwona",  "Wojtek", "Michal"]
-//tablica.push("Halina")
-//pop usuwa ostatni element w tablicy
-//tablica.pop()
-//tablica.unshift("Rafał")
-//tablica.reverse()
-//console.log(tablica)
-
-//let obiekt = {
- //   nazwisko: "Kowalski",
-//    imie: "Jan"
-//}
-//   console.log(obiekt.nazwisko)
-
-//for(let i = 0; i<tablica.length ; i++){
-//console.log(i + 1,tablica[i])
-//}
-//tablica.forEach(imiona => {
-//    console.log(imiona)
-//});//,
-
-//const posts = [
-/*    {
-        id:1,
-        name: "Jan Kowalski"
-    },
-    {
-        id:2,
-        name: "Adam Nowak"
-    },
-    {
-        id:3,
-        name: "Anna Dumna",
-    }
-]
-const blogs = [
-    {
-        id:1,
-        name: "Zywienie"
-    },
-    {
-        id:2,
-        name: "Ksiazki"
-    },
-    {
-        id:3,
-        name: "Nurkowanie",
-    }
-]
-
-    for(let i =0; i<posts.length; i++){
-        console.log(posts[i].name)
-    }
-
-    function dodawanie(a,b){
-let  wynik = a+b
-console.log(wynik)
-    }
-dodawanie(4,5)
-dodawanie(55,5)
-dodawanie(4,67)
-dodawanie("4","5")
-dodawanie("4",5)
-
-function wyswietlanieDanych(){
-
-}*/
+function pobierz() {
+    const wybor = document.getElementById('tabela').value
+    const url = `http://api.nbp.pl/api/exchangerates/tables/${wybor}/?format=json`
+    const kursy = document.getElementById('kursy')
+    kursy.innerHTML = ''
+    console.log(url)
+    fetch(url)
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)
+            for (let i = 0; i < res[0].rates.length; i++) {
+                let newDiv = document.createElement('div')
+                let spanWithCurrency = document.createElement('span')
+                spanWithCurrency.setAttribute('id', "spanWithCurrency")
+                spanWithCurrency.innerHTML = res[0].rates[i].currency
+                newDiv.appendChild(spanWithCurrency)
+                if (wybor === "C") {
+                    let spanWithBid = document.createElement('span')
+                    let spanWithAsk = document.createElement('span')
+                    spanWithBid.innerText = res[0].rates[i].bid
+                    spanWithAsk.innerText = res[0].rates[i].ask
+                    newDiv.appendChild(spanWithBid)
+                    newDiv.appendChild(spanWithAsk)
+                } else {
+                    let spanWithMid = document.createElement('span')
+                    spanWithMid.innerText = res[0].rates[i].mid
+                    spanWithMid.style.color = "red"
+                    newDiv.appendChild(spanWithMid)
+                }
+                kursy.appendChild(newDiv)
+            }
+        })
+}   
